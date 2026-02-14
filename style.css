@@ -1,0 +1,248 @@
+body {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    overflow-x: hidden
+}
+
+.container {
+    position: relative;
+}
+
+.side-img {
+    position: absolute;
+    width: 35%;
+    max-width: 180px;
+    z-index: -1;
+}
+
+.img-izquierda {
+    left: -27%;
+    top: 50%;
+    transform: scaleX(-1) translateY(-50%);
+}
+
+.img-derecha {
+    left: 92%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.invitacion-card {
+    position: relative;
+    max-width: 500px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* TAPA */
+.cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff4e80, #ff9a9e);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 20px;
+    transform-origin: bottom;
+    transition: transform 3s ease;
+    cursor: pointer;
+    z-index: 5;
+}
+
+/* Flecha */
+.arrow {
+    font-size: 30px;
+    margin-bottom: 15px;
+    animation: bounce 1.5s infinite;
+    color: white;
+}
+
+@keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Cuando se abre */
+.cover.open {
+    transform: rotateX(-180deg);
+    overflow: hidden;
+}
+.final-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 0, 100, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    position: relative;
+    animation: popUp 1s ease;
+}
+
+@keyframes popUp {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.cupid {
+    width: 6vw;
+    position: absolute;
+    top: -4vh;
+    left: -3vw;
+    animation: rotateCupid 4s linear infinite;
+}
+
+.cupid2 {
+    width: 6vw;
+    position: absolute;
+    top: -4vh;
+    left: 50vw;
+    animation: rotateCupid2 4s linear infinite;
+}
+
+@keyframes rotateCupid {
+    from {
+        transform: rotate(0deg) translateX(120px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(120px) rotate(-360deg);
+    }
+}
+
+@keyframes rotateCupid2 {
+    from {
+        transform: scaleX(-1) rotate(0deg) translateX(120px) rotate(0deg);
+    }
+
+    to {
+        transform: scaleX(-1) rotate(360deg) translateX(120px) rotate(-360deg);
+    }
+}
+
+
+.corazon {
+    position: fixed;
+    bottom: 0;
+    font-size: 24px;
+    animation: floatUp 5s linear infinite;
+    color: red;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-800px);
+        opacity: 0;
+    }
+}
+
+/* From Uiverse.io by cssbuttons-io */ 
+.teamo {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.teamo:hover {
+  background-color: #c42323;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.teamo:active {
+  transform: translateY(-1px);
+}
+
+/* ===== CORAZÓN LATIENDO (MENSAJE SECRETO) ===== */
+.secret-btn {
+    position: absolute;
+    bottom: 18px;
+    right: 22px;
+    background: transparent;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    animation: latido 1.5s infinite;
+    opacity: 0.8;
+}
+
+.secret-btn:hover {
+    opacity: 1;
+}
+
+@keyframes latido {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.2); }
+    40% { transform: scale(1); }
+    60% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+/* ===== MENSAJE SECRETO ===== */
+.secret-message {
+    position: absolute;
+    bottom: 70px;
+    right: 20px;
+    max-width: 320px;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    animation: aparecerSuave 1s ease;
+}
+
+@keyframes aparecerSuave {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

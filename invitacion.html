@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una invitación muy especial 💌</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container d-flex flex-column justify-content-center align-items-center vh-100">
+
+        <!-- CARD PRINCIPAL -->
+        <div class="card invitacion-card text-center p-4 shadow-lg">
+
+            <!-- TAPA -->
+            <div class="cover" id="cover">
+                <span class="arrow">⬆</span>
+            </div>
+
+            <!-- CONTENIDO -->
+            <div class="card-content p-4 position-relative">
+
+                <!-- Imágenes laterales -->
+                <img id="img-izquierda" src="https://media.tenor.com/L04oJsVbVD0AAAAj/sad-dudu.gif"
+                    class="side-img img-izquierda d-none">
+
+                <img id="img-derecha" src="https://media.tenor.com/L04oJsVbVD0AAAAj/sad-dudu.gif"
+                    class="side-img img-derecha d-none">
+
+                <!-- Texto -->
+                <h2 class="mb-3">💖 Invitación Especial 💖</h2>
+
+                <p class="mb-3">
+                    ¿Sabías que la Reina Isabel II aprendió mecánica desde los 16 años y sabía reparar motores?
+                </p>
+
+                <p class="mb-3">
+                    Tal vez tú no arregles motores…<br>
+                    pero hay algo de lo que estoy completamente seguro:
+                    <strong>tú eres mi reina 👑</strong>.
+                </p>
+
+                <p class="mb-3">
+                    Hoy quiero preguntarte algo muy especial:
+                    <br>
+                    ¿Aceptarías tener una cita conmigo este
+                    <strong>14 de febrero</strong>
+                    y compartir un día bonito, cálido y lleno de sonrisas
+                    junto a este caballero que te elige
+                    con el alma y el corazón? ❤️
+                </p>
+
+                <h4 class="mt-4">¿Aceptas?</h4>
+
+                <!-- Botones -->
+                <div class="mt-4">
+                    <button id="yesBtn" class="btn btn-success me-2 px-4">
+                        Sí 💖
+                    </button>
+                    <button id="noBtn" class="btn btn-danger px-4">
+                        No 😓
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Imagen triste -->
+        <img id="sadImage" src="https://media.giphy.com/media/OPU6wzx8JrHna/giphy.gif" class="img-fluid d-none mt-3"
+            width="200">
+    </div>
+
+    <!-- MENSAJE FINAL -->
+    <div id="finalMessage" class="final-popup d-none">
+        <div class="popup-content text-center">
+
+            <img id="cupido1" src="https://cdn-icons-png.flaticon.com/512/2569/2569716.png" class="cupid">
+
+            <img id="cupido2" src="https://cdn-icons-png.flaticon.com/512/2569/2569716.png" class="cupid2">
+
+            <h3 class="mb-3">Sabía que dirías que sí 😏❤️</h3>
+
+            <p class="mb-4">
+                Prepárate, porque este 14 de febrero
+                ya tiene nombre y apellido: <strong>nosotros</strong> 💕<br>
+                Cupido ya hizo su trabajo 🏹
+            </p>
+
+            <button id="teamo" class="teamo">
+                TE AMO
+            </button>
+            <!-- Corazón latiendo (mensaje secreto) -->
+            <button id="secretBtn" class="secret-btn" title="Toca mi corazón 🤍">
+                ❤️
+            </button>
+
+            <!-- Mensaje secreto oculto -->
+            <div id="secretMessage" class="secret-message d-none">
+                <p>
+                    Gracias por estar conmigo por más de cuatro años.<br><br>
+
+                    Te amo con todo mi corazón, de verdad.<br>
+                    Y en un futuro no muy lejano,
+                    te prometo que habrá un anillo 💍<br><br>
+
+                    Eres mi gordita linda.<br>
+                    Te amo hoy y siempre ❤️
+                </p>
+            </div>
+
+            <!-- Música -->
+            <audio id="loveMusic"
+                src="https://cs1.mp3.pm/listen/235465211/YUdNNkJ1VWE0YVFwWEVXbXBLQnoyREF4SEV5TWYzWElXNUVEWExEQ1ZWVXJPR2E1ZGZHT3dITW5BZW5BKzdNYnlrWDZGNEdROFRBSTJSNVdWQXpzaVI0VXExRjIyYk5pV1VPbXhXTmZLMWROSkExZHJraDNJekx4R01TeUhpQ0M/Latin_Mafia_-_Flores_(mp3.pm).mp3">
+            </audio>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="app.js"></script>
+</body>
+
+</html>
